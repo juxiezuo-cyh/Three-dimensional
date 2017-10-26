@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge" />
+    <title>全息全景|身临其境看报告</title>
+    <link rel="stylesheet" type="text/css" href="./css/style_and.css">
+</head>
+
+<body>
+    <!--视频-->
+    <div id="fm_video_box" class="video_box">
+        <video id="video_fm"  src="./video/fm_video1.mp4" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_dengta_box" class="video_box">
+        <video src="./video/dengta1.mp4" id="video_dengta" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_jiangtai_box" class="video_box">
+        <video src="./video/jiangtai1.mp4" id="video_jiangtai" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_chuan_box" class="video_box">
+        <video src="./video/chuan1.mp4" id="video_chuan" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_feiji_box" class="video_box">
+        <video src="./video/feiji1.mp4" id="video_feiji" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_chengshi_box" class="video_box">
+        <video src="./video/chengshi1.mp4" id="video_chengshi" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_gaotie_box" class="video_box">
+        <video src="./video/gaotie1.mp4" id="video_gaotie" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="video_huojian_box" class="video_box">
+        <video src="./video/huojian1.mp4" id="video_huojian" x-webkit-airplay="true"
+            playsinline webkit-playsinline="true" x5-video-player-type="h5" preload="auto"></video>
+    </div>
+    <div id="loading">
+        <div id="loading_img">
+            <img  src="./images/loading.gif">
+            <div id="loading_p">
+                <p>0%</p>
+            </div>
+        </div>
+    </div>
+    <div id="orientLayer" class="mod-orient-layer">
+        <div class="mod-orient-layer__content">
+            <i class="icon mod-orient-layer__icon-orient"></i>
+            <div class="mod-orient-layer__desc">为了更好的体验，请锁屏后竖屏浏览</div>
+        </div>
+    </div>
+    <div id="fm">
+        <div id="fm_bt">
+            <img src="./images/fm_bt.png">
+        </div>
+        <div id="fm_start">
+            <img src="./images/fm_start.png">
+        </div>
+        <div id="fm_cp">
+            <img src="./images/fm_cp.png">
+        </div>
+    </div>
+    <!--创作团队-->
+    <div id="cztd_btn">
+        <img src="./images/cztd_btn.png">
+    </div>
+    <div id="cztd">
+        <div id="cztd_img">
+            <img src="./images/cztd_img.png">
+            <div id="cztd_close">
+                <img src="./images/cztd_close.png">
+            </div>
+        </div>
+    </div>
+    <!--封面跳过按钮-->
+    <div id="fm_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--灯塔跳过按钮-->
+    <div id="dengta_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--讲台跳过按钮-->
+    <div id="jiangtai_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--船跳过按钮-->
+    <div id="chuan_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--飞机跳过按钮-->
+    <div id="feiji_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--城市跳过按钮-->
+    <div id="chengshi_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--高铁跳过按钮-->
+    <div id="gaotie_next" class="next">
+        <img src="./images/next.png">
+    </div>
+    <!--火箭跳过按钮-->
+    <div id="huojian_next" class="next">
+        <img  src="./images/next.png">
+    </div>
+    <!--进入全景图按钮-->
+    <div id="qj_btn" class="qjbtn">
+        <img  src="./images/qj_btn_img.png">
+    </div>
+    <!--弹窗背景-->
+    <div id="tc_bg">
+
+    </div>
+    <div id="controlBtn" class="controlBtn controlIcon"></div>
+    <!-- 陀螺仪开启按钮 -->
+    <div id="pano">
+        <!-- 正方体的六个面 -->
+        <div id="bg_section_0" class="bg_section bg_section_4 scale_test">
+            <div id="chengshi_yuandian" class="yuandian_move">
+                <img src="./images/yuandian.png">
+            </div>
+        </div>
+        <div id="bg_section_1" class="bg_section bg_section_5 scale_test">
+            <div id="huojian_yuandian" class="yuandian_move ">
+                <img src="./images/yuandian.png">
+            </div>
+            <div id="chuan_yuandian" class="yuandian_move">
+                <img src="./images/yuandian.png">
+            </div>
+        </div>
+        <div id="bg_section_2" class="bg_section bg_section_2 scale_test">
+            <div id="feiji_yuandian" class="yuandian_move">
+                <img src="./images/yuandian.png">
+            </div>
+        </div>
+        <div id="bg_section_3" class="bg_section bg_section_3 scale_test">
+        </div>
+        <div id="bg_section_4" class="bg_section bg_section_1 scale_test">
+            <div id="dangzhang_move">
+                <img src="./images/dangzhang_move.png">
+            </div>
+            <div id="dangzhang_yuandian" class="yuandian_move">
+                <img src="./images/yuandian.png">
+            </div>
+            <div id="dengta_yuandian" class="yuandian_move">
+                <img src="./images/yuandian.png">
+            </div>
+            <div id="jiangtai_yuandian" class="yuandian_move ">
+                <img src="./images/yuandian.png">
+            </div>
+        </div>
+        <div id="bg_section_5" class="bg_section bg_section_0 scale_test">
+            <div id="gaotie_yuandian" class="yuandian_move ">
+                <img src="./images/yuandian.png">
+            </div>
+        </div>
+    </div>
+    <!--audio start-->
+    <audio id="aud2" src="./music/bg.mp3" loop="true"></audio>
+    <audio src="./music/dangzhang_19.mp3" id="dangzhang_19_mp3"></audio>
+    <!--audio end-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/pxloader-all.min.js"></script>
+    <script src="./js/three.min.js"></script>
+    <script src="./js/CSS3DRenderer.min.js"></script>
+    <script src="./js/DeviceOrientationControls_and.js"></script>
+    <script src="./js/main_and.js"></script>
+    <style type="text/css">
+        /* 样式放在结尾，防止 base64 图片造成拥塞 */
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+            30% {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg)
+            }
+            60% {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg)
+            }
+            90% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+        }
+
+        @-webkit-keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+            30% {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg)
+            }
+            60% {
+                transform: rotate(-90deg);
+                -webkit-transform: rotate(-90deg)
+            }
+            90% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg)
+            }
+        }
+
+        .mod-orient-layer {
+            display: none;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: #000000;
+            z-index: 9997
+        }
+
+        .mod-orient-layer__content {
+            position: absolute;
+            width: 100%;
+            top: 45%;
+            margin-top: -75px;
+            text-align: center
+        }
+
+        .mod-orient-layer__icon-orient {
+            display: inline-block;
+            width: 67px;
+            height: 109px;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAADaCAMAAABU68ovAAAAXVBMVEUAAAD29vb////x8fH////////x8fH5+fn29vby8vL////5+fn39/f6+vr////x8fH////////+/v7////09PT////x8fH39/f////////////////////x8fH///+WLTLGAAAAHXRSTlMAIpML+gb4ZhHWn1c2gvHBvq1uKJcC6k8b187lQ9yhhboAAAQYSURBVHja7d3blpowFIDhTUIAOchZDkre/zE7ycySrbUUpsRN2/1fzO18KzEqxEVgTiZNfgmmtxRc8iaR8HNe8x4BtjQePKayYCIoyBSgvNNE1AkNSHqZyLqk97EgUCCHBzZ5mkg7ScvIJuIyOyXBRFxgpqWZyGsAZLB1KjsJi8nutHU4JCRbFRH8tmirI9k8Jx2sqNs8K/m0LQkrktO2crgcgXGB4AiTEsB0hJfo9MGgX7CGcYiYwQxmMOOvZwRhBG8tCoMXjBDeXvWCEcHbi14wgCBmMIMZzGAGM5jxETNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxA8cMHDNwzMAxY6E2rUQxnH2tz9cirlJFwFBJedaPnUv0M7++egPDE8iAJcIDmxwH5wwv9vUviw2kLbVO3TJU5uul/EyB0FoLp4x60PdGUd3qPurrWyjGGTc05u+1dcgI7/+tCCPARWGhH7o5Y7RCf+bH9ctXLp6v2BVDxfqz0oPXeSVaNtINo/1SXDv4dck8IIkbhtC2ol+iouEonTBCbYvVMnXOjxww6s/RFrBUpXHh/gw1rHj5d/qhYn9Gpk2FWh6xRBRX5Oj3Znh2Sq49/L6+y8pB26q9GbE2dbA2mVbx6I+7MfBglLCttm73ZQi7AD3iL4HqjFYJHSPRppqaUaJ3ATpGa+ckpGak2hRRMyqjGMkvl+xyFeSMwjAqcsZgGDdyhl0oNTnDN4yenJGZFGxNChP5/Y3efh6SM2rDOJMzboYxkDMqwyjIGcIw6F+io2FU1IxIm1JqRmgXSkvNKNCXeTpGrU0JNSO2c6LIGPgCS8AuDHz9ta0SXWDtxoDRH+MqlbC2Dt2G2JFRadtQZt2qq/orGowdGb2euxYiqWEpVWhTBnszoNAPdStuQwxqf0aocdWKW4Z+DfszIh8pxJqbuCE4YAC+4bm0evtipjpgJHeFnyyt1Ku2xa0bhjxr27p75rECNwyI9ZwvXkHq+7aTaMEV44YYy/spfgjgjNHaWW+GeUhGEX7tLlVinIFDDSgnOwhi1V6bU0b6tVS9eAERe863g4dRrtiHdc6o+nn5vtyVVgR79Cqt4uL6gfHPQyGqtP2vf7HADGbcYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JiBYwaOGThm4JjhtOM+J/AgT008yDMkN/dPP9hzS8zAMQN3OEYeekp5YU7KOKXwVXqiY+QS7smcinGKABWdiBgpPJTSMHJ4KidhhPBUSMLw4CmPhKHgKUXCkHsygum71ftNSgCX6bsl8FQyfbcL5EdYsDk0R3j7aiA5wpt5AjKg/2gLJEBD/0Hf2OOf/vRrj6z/7GtP4B3nMKyjHA12kIPSjnJs3FEO0TvKkYJHOWCR+rjJH0Vn6fI5PjNbAAAAAElFTkSuQmCC');
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -webkit-animation: rotation infinite 1.5s ease-in-out;
+            animation: rotation infinite 1.5s ease-in-out;
+            -webkit-background-size: 67px;
+            background-size: 67px
+        }
+
+        .mod-orient-layer__desc {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #fff
+        }
+
+        .mod-orient-layer__desc {
+            margin-top: 20px;
+            font-size: 15px;
+            color: #fff
+        }
+
+        @media all and (orientation: portrait) {
+            #orientLayer {
+                display: none;
+            }
+        }
+
+        @media all and (orientation: landscape) {
+            #orientLayer {
+                display: block;
+            }
+        }
+    </style>
+    <div style="display:none">
+        <div id="fwl">010020050640000000000000011200000000000000</div>
+        <script type="text/javascript" src="http://webd.home.news.cn/webdig.js?z=1"></script>
+    <script type="text/javascript ">
+        // wd_paramtracker("_wdxid=010020050640000000000000011200000000000000 ")
+    </script>
+    <noscript>
+        <img src="http://webd.home.news.cn/1.gif?z=1&_wdxid=010020050640000000000000011200000000000000
+            " border="0 " />
+    </noscript>
+</div>
+<div style="display: none; ">
+    <div class="share-img " style="width: 0;height: 0;overflow: hidden; ">
+        <img src="./images/fenxiang.jpg ">
+    </div>
+    <p class="share-title " style="height:0;overflow: hidden;width: 0; ">身临其境看报告</p>
+    <p class="share-substr " style="height:0;overflow: hidden;width: 0; ">全息全景|身临其境看报告</p>
+</div>
+<script type="text/javascript " src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js "></script>
+<script type="text/javascript " src="http://www.xinhuanet.com/global/public/wxShare.js "></script>
+<!--<script type="text/javascript " src="js/weixin.js "></script>-->
+<script>
+    //一般情况下，这样就可以自动播放了，但是一些奇葩iPhone机不可以
+    document.getElementById('aud2').play();
+    //必须在微信Weixin JSAPI的WeixinJSBridgeReady才能生效
+    document.addEventListener("WeixinJSBridgeReady ", function () {
+        document.getElementById('aud2').play();
+    }, false);
+</script>
+</body>
+</html>
